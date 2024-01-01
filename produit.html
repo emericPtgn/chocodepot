@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Chocolat sans gluten ! Commande en ligne et livraison en 48h. " />
+        <meta http-equiv=”Content-Security-Policy” content=”default-src ’self’; img-src *”>
+        <title>Produit chocopap</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="produit.js" defer></script>
+        <script src="panier.js" defer ></script>
+        <script src="menu.js" defer></script>
+    </head>
+    <body>
+        <!-- TODO: Rendre la fiche produit dynamique -->
+        <header>
+            <div id="header">
+                <div id="header-logo">
+                    <img src="images/logo.png" alt="logo" width="70" height="70">
+                </div>
+                <div id="header-right">
+                    <img id="menuToggle" src="images/menus.png" alt="menu-toggle-icon">
+                    <nav id="navBar">
+                        <div class="text-style1">
+                            <p><a href="index.html">Accueil</a></p>
+                        </div>
+                        <div class="text-style1">
+                            <p><a href="boutique.html">Boutique</a></p>
+                        </div>
+                        <div class="panier text-style1">
+                            <p><a href="#">Panier </a></p> <div id="cartNbItems"></div>
+                            <img src="images/panier.png" alt="panier" width="70" height="70">
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="cart">
+                <span id="closeButton">&times;</span>
+                <div id="cartHeader">
+                    <div>PANIER</div>
+                </div>
+                <div id="cartBody">
+                </div>
+                <div id="cartFooter">
+                    <div id="cartTotal">Total : 0.00€</div>
+                    <button type="reset" id="resetCart">REINITIALISER LE PANIER</button>
+                    <button id="validateCart">VALIDER LE PANIER</button>
+                </div>
+            </div>
+            <div class="content-product">
+                <div id="productImage">
+                    <img src="images/produit1.jpg" alt="produit1" width="300" height="300">
+                </div>
+                <div class="table">
+                    <div class="text-style1" style="margin-top: 10px" id="titleContainer">Nom produit</div>
+                    <div class="text-style3" style="margin-top: 10px" id="productPrice">XX €</div>
+                    <div class="text-style4" style="margin-top: 10px" id="productDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                    <input type="number" id="qte" value="1">
+                    <div class="text-style2" style="margin-left: 10px; margin-top: 10px" id="productCTA">AJOUTER AU PANIER</div>
+                </div>
+                <div class="content-table">
+                    <div class="text-style1">Ingrédients</div>
+                    <div id="productIngredients">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer-section-1">
+                <div>
+                    <p class="text-style1">Choco Pap</p>
+                    <p class="text-style4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+                <div>
+                    <p class="text-style1">Contact</p>
+                    <p class="text-style4">Adresse : 51 rue du chocolat 75000 Paris 
+                        <br>Téléphone: 01 23 45 67 89
+                        <br>Horaires: 9h00-17h00 du Lundi au vendredi
+                    </p>
+                </div>
+            </div>
+            <div id="social-network">
+                <img width="30" height="30" src="images/logo-facebook.png" alt="social-icon-facebook" >
+                <img width="30" height="30" src="images/logo-instagram.jpeg" alt="social-icon-instagram" >
+                <img width="30" height="30" src="images/logo-twitter.png" alt="social-icon-twitter" >
+            </div>
+        </footer>
+    </body>
+</html>

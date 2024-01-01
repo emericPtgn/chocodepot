@@ -1,0 +1,576 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif");
+
+
+:root {
+    --white : #FFFFFF;
+    --blue : #55C0CF;
+    --brown : #B65F28;
+    --yellow : #FFD543;
+    --black1 : #2C1E1E;
+    --black2 : #1F1615
+}
+
+a {
+    text-decoration: none;
+    color: #2C1E1E;
+}
+
+p {
+    color: #2C1E1E;
+    font-family: 'Droid Serif';
+}
+
+body {
+    background-color: #fbf9f9;
+}
+
+.content {
+    background-color: #fbf9f9;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 50px;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue) ;
+    box-shadow: 0px -5px 1px -5px rgba(0, 0, 0, 0.5) inset;
+    padding: 1% 5%;
+    position: relative;
+    height: 100px;
+}
+.panier {
+    display: flex;
+    align-items: center;
+
+}
+.panier img {
+    width: 20px;
+    height: 20px;
+}
+
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #55C0CF;
+    padding: 30px 5%;
+}
+
+.footer-section-1 {
+    display: flex;
+    justify-content: space-between;
+    flex : 1;
+}
+
+.footer-section-1 > div {
+    flex: 1;
+}
+
+.footer-section-1 > div p:nth-child(2) {
+    font-size: 12px;
+}
+
+.footer-section-1 .text-style1 ~ p {
+    width: 260px;
+}
+
+#header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navBar {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+#cartNbItems {
+    margin-left : 0;
+}
+#menuToggle {
+    visibility: hidden;
+}
+.panier p{
+    visibility: collapse;
+}
+
+#social-network {
+    display: flex;
+    flex : 1;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#social-network img {
+    margin: 5px;
+    width: 30px;
+}
+
+#informations, #contact {
+    margin: 20px;
+}
+
+
+.text-style1 {
+    font-size: 20px;
+    font-family: 'Fjalla One';
+    
+}
+
+.text-style1 a {
+    color: var(--white);
+
+}
+
+.text-style2 {
+    display: inline-block;
+    font-family: 'Droid Serif';
+    padding: 10px;
+    border: 2px solid;
+}
+
+.text-style2 a {
+    color: #2C1E1E;
+}
+
+.text-style3 {
+    font-size: 18px;
+}
+.text-style3, .text-style4 {
+    color: #2C1E1E;
+    font-family: 'Droid Serif';
+}
+#titleShop {
+    font-family: "Fjalla One";
+    text-align: center;
+    margin: 0;
+    padding: 150px 0;
+}
+#subTitleShop {
+    text-align: center;
+}
+
+.zone-filtre {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.zone-filtre input {
+    max-width: 20%;
+}
+.zone-filtre select {
+    max-width: 30%;
+}
+#filtre-categorie {
+    display: flex;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+    padding: 20px;
+    height: fit-content;
+    width: 200px;
+}
+.dropdown-menu-categorie, .dropdown-menu-prix, .dropdown-menu-note {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.table {
+    display: table;
+    grid-area: table;
+}
+
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    justify-content: space-around;
+    margin: 0 30px;
+
+}
+
+#catalog img {
+    border-radius: 50%;
+    transform: scale(1.02); /* Grossissement au survol */
+    background-color: red;
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+}
+
+.card {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.card h3,p,a {
+    font-family: 'Fjalla One';
+}
+
+.card h3 {
+    cursor: pointer;
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.addCartBtn {
+    all: unset;
+    margin-top : 15px;
+    padding: 10px;
+    color: var(--white);
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+.addCartBtn a {
+    color: var(--white);
+}
+
+.addCartBtn:active {
+    transition-duration: 0.9;
+    background-color: var(--brown);
+}
+
+.addCartBtn:hover {
+    transform: scale(1.02); /* Grossissement au survol */
+    background-color: red;
+}
+
+.addCartBtn:hover::before {
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+}
+
+.content-product {
+    display: grid;
+    grid-template-columns: 1fr 350px 350px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    ". productImage table ."
+    ". content-table content-table ."
+    ;
+    padding-top: 100px;
+    row-gap: 100px;
+    column-gap: 4vw;
+}
+
+.content-table {
+    grid-area: content-table;
+}
+
+
+#productDescription {
+    max-width: 400px;
+}
+
+#productIngredients {
+    margin-top: 50px;
+}
+
+#productImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    grid-area: productImage;
+}
+
+
+#productImage img {
+    max-width: 350px;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+#titleContainer {
+    font-size: 30px;
+    text-transform: uppercase;
+    
+}
+
+#titleContainer h3 {
+    margin-top: 0;
+}
+
+#qte, .quantitySelector {
+    width: 15%;
+    height: fit-content;
+    padding: 11.5px;
+    border: 2px solid;
+}
+
+#carrousel {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* .carouselImg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+#ctaAccueil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; /* Ajout d'une couleur de fond pour le bouton */
+    padding: 10px;
+    border: 2px solid black;
+}
+
+#progressContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progressCircle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #555; /* Couleur des cercles */
+    margin: 0 5px; /* Espace entre les cercles */
+}
+
+.progressCircle.active {
+    background-color: #fff; /* Couleur blanche pour le cercle actif */
+}
+
+main {
+    position: relative;
+}
+#mainCatalog {
+    padding: 0 50px;
+}
+
+#cart {
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    font-family: "Fjalla One";
+    width: 30%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 5px 0 rgba(0, 0, 0, 0.14);
+}
+
+#cart.visible {
+    visibility: visible;
+}
+
+#cart button {
+    display: block;
+    width: 50%;
+}
+#cartHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    height: 10vh;
+    box-shadow: 0px -5px 1px -5px rgba(0, 0, 0, 0.5) inset;
+
+}
+#cartBody {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    height: 60vh ;
+    overflow-y: scroll;
+}
+#cartFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    height: 20%;
+    height: 30vh;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+
+}
+
+.cartItemImage {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-left : 30px;
+    border-radius: 50%;
+    
+}
+
+.itemInfo {
+    display: block;
+    margin-left: 30px;
+    margin-right : 10px;
+    width: 100px;
+}
+.itemInfo p {
+    margin-bottom : 0;
+}
+
+#closeButton {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 20px;
+    color: #000;
+}
+.label-filtre {
+    display: inline-block;
+    width: 80px;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Styles à appliquer lorsque la largeur de l'écran est inférieure ou égale à 600 pixels */
+
+    #filter {
+        width: 100%;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    #catalog {
+        flex-direction: column;
+    }
+
+    .content-product {
+        grid-template-columns: 1fr auto 1fr ;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". table ."
+        ". productImage ."
+        ". content-table ."
+        ;
+        padding-top: 100px;
+        row-gap: 50px;
+        column-gap: 50px;
+        justify-items: center;
+    }
+
+    #produitIngredients {
+        width: 350px;
+    }
+
+    #cart {
+        width: 100%;
+    }
+
+    #footer, .footer-section-1 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #social-network {
+        justify-content: center;
+        margin: 32px 0;
+    }
+
+    .dropdown-menu-categorie, .dropdown-menu-prix, .dropdown-menu-note {
+        display: none;
+    }
+
+    #menuToggle {
+        visibility: visible;
+        flex-shrink: 0;
+        cursor: pointer;
+        align-self: center;
+        position: absolute;
+        top: 40%;
+        right: 10%;
+    }
+
+    #navBar.menu-visible {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 3;
+        top: 100%;
+        left: 0%;
+        background-color: var(--blue);
+        width: 100%;
+    }
+
+    #navBar {
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+    #cartNbItems {
+        margin-left : 10px;
+    }
+    .panier p{
+        visibility:visible;
+    }
+    #carrousel{
+        height: 60vh;
+        object-fit: cover;
+    }
+    #mainCatalog {
+        padding: 0 5px;
+    }
+
+    
+
+    
+  }
+  
+

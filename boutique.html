@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Laissez-vous tenter par les 10 gammes de chocolats avec livraison en 48h ! Chocopap, le pape du chocolat ! " />
+        <meta name="theme-color" content="#317EFB"/>
+        <meta http-equiv=”Content-Security-Policy” content=”default-src ’self’; img-src *”>
+        <title>Boutique chocopap</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="catalogue.js" defer></script>
+        <script src="panier.js" defer ></script>
+        <script src="menu.js" defer></script>
+        <script src="dropdown-filters.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="header">
+                <div id="header-logo">
+                    <img src="images/logo.png" alt="logo" width="70" height="70">
+                </div>
+                <div id="header-right">
+                    <img id="menuToggle" src="images/menus.png" alt="menu-toggle">
+                    <nav id="navBar">
+                        <div class="text-style1">
+                            <p><a href="index.html">Accueil</a></p>
+                        </div>
+                        <div class="text-style1">
+                            <p><a href="boutique.html">Boutique</a></p>
+                        </div>
+                        <div class="panier text-style1">
+                            <p><a href="#">Panier </a></p> <div id="cartNbItems"></div>
+                            <img src="images/panier.png" alt="panier" width="70" height="70">
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main id="mainCatalog">
+            <div id="cart">
+                <span id="closeButton">&times;</span>
+                <div id="cartHeader">
+                    <div>PANIER</div>
+                </div>
+                <div id="cartBody">
+                </div>
+                <div id="cartFooter">
+                    <div id="cartTotal">Total : 0.00€</div>
+                    <button type="reset" id="resetCart">REINITIALISER LE PANIER</button>
+                    <button id="validateCart">VALIDER LE PANIER</button>
+                </div>
+            </div>
+            <div id="titleShop">
+                <h1 > CHOCOPAP, LE PAPE DU CHOCOLAT </h1>
+                <h2> Découvrez nos créations de noël ! </h2>
+            </div>
+            <div class="content">
+                <!-- FILTRES -->
+                <div id="filter">
+                    <div class="text-style3">Cat&eacute;gories <img class="dropdown-categorie" src="images/fleche-bas.png" alt="dropdown-icon-category" ></div>
+                    <div id="filtre-categorie" class="zone-filtre">
+                        <ul class="dropdown-menu-categorie">
+                            <li>
+                                <input type="checkbox" id="ch-all" value="all" checked>
+                                <label for="ch-all" class="text-style4">Tous</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ch-chocolat-blanc" value="blanc" >
+                                <label for="ch-chocolat-blanc" class="text-style4">Chocolat blanc</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ch-chocolat-lait" value="lait" >
+                                <label for="ch-chocolat-lait" class="text-style4">Chocolat au lait</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ch-chocolat-noir" value="noir" >
+                                <label for="ch-chocolat-noir" class="text-style4">Chocolat noir</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ch-noix" value="noix" >
+                                <label for="ch-noix" class="text-style4">Noix/Noisette</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ch-fruit" value="fruit" >
+                                <label for="ch-fruit" class="text-style4">Fruit</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ch-caramel" value="caramel" >
+                                <label for="ch-caramel" class="text-style4">Caramel</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="ch-liqueur" value="liqueur" >
+                                <label for="ch-liqueur" class="text-style4">Liqueur</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-style3">Prix <img class="dropdown-prix" src="images/fleche-bas.png"  alt="dropdown-icon-price"></div>
+                    <div class="zone-filtre">
+                        <ul class="dropdown-menu-prix">
+                            <li class="filtre-espace">
+                                <span class="text-style4 label-filtre">Prix min</span>
+                                <input type="number" id="prix-min">
+                            </li>
+                            <li class="filtre-espace ">
+                                <span class="text-style4 label-filtre">Prix max</span>
+                                <input type="number" id="prix-max">
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="text-style3">Notes <img class="dropdown-note" src="images/fleche-bas.png"  alt="dropdown-icon-note"></div>
+                    <div class="zone-filtre">
+                        <ul class=" dropdown-menu-note">
+                            <li>
+                                <span class="text-style4 label-filtre">Note min</span>
+                                <select id="note-min">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span class="text-style4 label-filtre">Note max</span>
+                                <select id="note-max">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="catalog">
+                    <!-- TODO : Ajouter les produits de façon dynamique-->
+                </div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer-section-1">
+                <div>
+                    <p class="text-style1">Choco Pap</p>
+                    <p class="text-style4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+                <div>
+                    <p class="text-style1">Contact</p>
+                    <p class="text-style4">Adresse : 51 rue du chocolat 75000 Paris 
+                        <br>Téléphone: 01 23 45 67 89
+                        <br>Horaires: 9h00-17h00 du Lundi au vendredi
+                    </p>
+                </div>
+            </div>
+            <div id="social-network">
+                <img width="30" height="30" src="images/logo-facebook.png" alt="social-icon-facebook" >
+                <img width="30" height="30" src="images/logo-instagram.jpeg" alt="social-icon-instagram" >
+                <img width="30" height="30" src="images/logo-twitter.png" alt="social-icon-twitter" >
+            </div>
+        </footer>
+    </body>
+</html>
