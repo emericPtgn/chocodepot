@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Chocopap : un monde de plaisir ! Pour noêl découvrez les nouvelles créations chocolatées du maîtrise chocolatier chocopapa" />
+        <meta http-equiv=”Content-Security-Policy” content=”default-src ’self’; img-src *”>
+        <title>Choco pap, le pape du chocolat !</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="panier.js" defer ></script>
+        <script src="menu.js" defer></script>
+        <script src="carousel.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="header">
+                <div id="header-logo">
+                    <img src="images/logo.png" alt="logo" width="70" height="70">
+                </div>
+                <div id="header-right">
+                    <img id="menuToggle" src="images/menus.png" alt="menu-toggle">
+                    <nav id="navBar">
+                        <div class="text-style1">
+                            <p><a href="index.html">Accueil</a></p>
+                        </div>
+                        <div class="text-style1">
+                            <p><a href="boutique.html">Boutique</a></p>
+                        </div>
+                        <div class="panier text-style1">
+                            <p><a href="#">Panier </a></p> <div id="cartNbItems"></div>
+                            <img src="images/panier.png" alt="panier" width="70" height="70">
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="cart">
+                <span id="closeButton">&times;</span>
+                <div id="cartHeader">
+                    <div>PANIER</div>
+                </div>
+                <div id="cartBody">
+                </div>
+                <div id="cartFooter">
+                    <div id="cartTotal">Total : 0.00€</div>
+                    <button type="reset" id="resetCart">REINITIALISER LE PANIER</button>
+                    <button id="validateCart">VALIDER LE PANIER</button>
+                </div>
+            </div>
+            <!-- CAROUSSEL -->
+            <div id="carrousel">
+                <div id="progressContainer">
+                    <div class="progressCircle"></div>
+                    <div class="progressCircle"></div>
+                    <div class="progressCircle"></div>
+                </div>
+                <img src="images/accueil1.jpg"  alt="Accueil1"  class="cover " >
+                <img src="images/accueil2.jpg" alt="Accueil2" class="cover" >
+                <img src="images/accueil3.jpg" alt="Accueil3" class="cover" >
+                <div id="ctaAccueil" class="text-style2"><a href="boutique.html">VOIR LA BOUTIQUE</a></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="footer-section-1">
+                <div>
+                    <p class="text-style1">Choco Pap</p>
+                    <p class="text-style4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+                <div>
+                    <p class="text-style1">Contact</p>
+                    <p class="text-style4">Adresse : 51 rue du chocolat 75000 Paris 
+                        <br>Téléphone: 01 23 45 67 89
+                        <br>Horaires: 9h00-17h00 du Lundi au vendredi
+                    </p>
+                </div>
+            </div>
+            <div id="social-network">
+                <img width="30" height="30" src="images/logo-facebook.png" alt="social-icon-facebook" >
+                <img width="30" height="30" src="images/logo-instagram.jpeg" alt="social-icon-instagram" >
+                <img width="30" height="30" src="images/logo-twitter.png" alt="social-icon-twitter" >
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+User-agent : *
+
+Allow : /index.html
+Allow : /boutique.html
+Allow : */produit.html
+
+Sitemap : https://www.chocopapa.great-site.net/sitemap.xml
